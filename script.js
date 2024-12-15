@@ -1,6 +1,7 @@
 function calculate(currentGrade, weight, finalGradeHope) {
     let calc = (finalGradeHope - ((1 - weight/100) * currentGrade))/(weight/100);
     document.querySelector("#result").innerText = Math.round(calc*100)/100;
+    document.querySelector("#result").style.color = calc > 100 ? "red" : "green";
 }
 
 function updateValuesFromSliders() {
