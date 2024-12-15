@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=SUSE:wght@100..800&display=swap');
+
+body {
+    background: rgb(40,32,173);
+    background: -moz-linear-gradient(90deg, rgba(40,32,173,1) 0%, rgba(0,113,254,1) 35%, rgba(0,255,218,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(40,32,173,1) 0%, rgba(0,113,254,1) 35%, rgba(0,255,218,1) 100%);
+    background: linear-gradient(90deg, rgba(40,32,173,1) 0%, rgba(0,113,254,1) 35%, rgba(0,255,218,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2820ad",endColorstr="#00ffda",GradientType=1);
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+}
+
+main {
+    width: 100%;
+    align-content: center;
+    text-align: center;
+}
+/* Container for alignment */
+.range-slider-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Style the range slider */
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 200px;
+    height: 10px;
+    border-radius: 5px;
+    background: linear-gradient(to left, aquamarine, blue);
+    outline: none;
+    margin: 0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  /* Thumb (slider handle) */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid blue;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid blue;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  input[type="range"]::-moz-range-thumb:hover {
+    transform: scale(1.2);
+  }
+  
+  input[type="range"]::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid blue;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  input[type="range"]:focus {
+    outline: none;
+  }
+  
+  /* Value display */
+  .range-value {
+    font-size: 16px;
+    color: #007FFF; /* A shade of blue for modern look */
+    font-weight: bold;
+  }
+  
+/* input[type=number] {
+    width: 2ch;
+} */
