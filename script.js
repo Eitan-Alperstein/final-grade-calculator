@@ -16,6 +16,23 @@ function updateValuesFromSliders() {
     calculate(currentGrade.value, weight.value, finalGradeHope.value);
 }
 
+function updateSlidersFromValues() {
+    let currentGrade = document.querySelector("#currentGradeValue");
+    let weight = document.querySelector("#weightValue");
+    let finalGradeHope = document.querySelector("#finalGradeHopeValue");
+
+    document.querySelector("#currentGrade").value = currentGrade.value;
+    document.querySelector("#weight").value = weight.value;
+    document.querySelector("#finalGradeHope").value = finalGradeHope.value;
+
+    calculate(currentGrade.value, weight.value, finalGradeHope.value);
+}
+
+document.querySelector("#currentGradeValue").addEventListener("input", updateSlidersFromValues);
+document.querySelector("#weightValue").addEventListener("input", updateSlidersFromValues);
+document.querySelector("#finalGradeHopeValue").addEventListener("input", updateSlidersFromValues);
+
 document.querySelector("#currentGrade").addEventListener("input", updateValuesFromSliders);
 document.querySelector("#weight").addEventListener("input", updateValuesFromSliders);
 document.querySelector("#finalGradeHope").addEventListener("input", updateValuesFromSliders);
+
